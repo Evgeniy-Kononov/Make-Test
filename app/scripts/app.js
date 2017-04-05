@@ -9,12 +9,13 @@ $(document).ready(function (){
 	$('.form').submit(function () {
 		const patternNumber = /[0-9]{4}$/gim;
 		const patternNumberCode = /[0-9]{3}$/gim;
-		const patternText = /[0-9]{3}$/gim;
+		const patternText = /^(([a-zA-Z]{3,})(\s([a-zA-Z]{3,}))){1}$/gim;
 		const number1 = $('#number1').val().trim();
 		const number2 = $('#number2').val().trim();
 		const number3 = $('#number3').val().trim();
 		const number4 = $('#number4').val().trim();
 		const code = $('#code').val().trim();
+		const login = $('#login').val().trim();
 
 		if (!patternNumber.test(number1)){
 			$('#number1').addClass('card-first_number-invalid');
@@ -55,6 +56,14 @@ $(document).ready(function (){
 		}else {
 			$('#code').removeClass('card-first_number-invalid');
 			$('#code').addClass('card-first_number-valid');
+		}
+		if (!patternText.test(login)){
+			$('#login').addClass('card-first_number-invalid');
+			$('#login').removeClass('card-first_number-valid');
+			event.preventDefault();
+		}else {
+			$('#login').removeClass('card-first_number-invalid');
+			$('#login').addClass('card-first_number-valid');
 		}
 	});
 });
