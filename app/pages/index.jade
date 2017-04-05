@@ -1,0 +1,19 @@
+include ../blocks/background/background
+include ../blocks/center/center
+include ../blocks/main/main
+include ../blocks/menu/menu
+include ../blocks/card/card
+include ../blocks/footer/footer
+
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Test ИДАГРУПП';
+
+block content
+	+background
+		+center
+			+menu
+			+main
+				+card
+				+footer

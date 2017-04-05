@@ -1,0 +1,71 @@
+clr-menu = #7b808d
+clr-activ = #2a2d37
+
+.menu
+	display inline-block
+	vertical-align top
+	+below(860px)
+		margin 0 auto
+		display block
+		width 100%
+		max-width 640px
+	+below(670px)
+		margin 0
+		max-width 100%
+
+	nav
+		margin-right -5px
+		+below(860px)
+			margin-left 6px
+		+below(670px)
+			margin 0
+
+		ul
+			display block
+			li
+				padding 32px 28px
+				background #191c24
+				+below(860px)
+					margin-left -6px
+					padding 16px 11px
+					display inline-block
+					letter-spacing none
+					border-left 1px solid clr-activ
+					border-right 1px solid clr-activ
+				+below(670px)
+					margin 0
+					display block
+					text-align center
+					border none
+
+
+				a
+					text-decoration none
+					color white
+
+				&:first-child
+					border-left none
+
+				&:last-child
+					+below(860px)
+						width 68px
+						border-right none
+						text-align center
+
+					+below(670px)
+						width 100%
+
+			.active
+				background clr-activ
+				a
+					color clr-menu
+
+			:hover
+				cursor pointer
+				background #1f2229
+
+			:active
+				background clr-activ
+
+			:active a
+				color #7b808d

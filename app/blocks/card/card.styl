@@ -1,0 +1,181 @@
+tgrey = #8494ab
+br-color = #e4e9ee
+
+.card
+	padding 45px 30px
+	+below(670px)
+		padding none
+
+	>p
+		margin-top 8px
+		font-family 'Open Sans', sans-serif
+		font-size 24px
+		font-weight bold
+		+below(670px)
+				margin 40px 0
+				text-align center
+
+	.card-pay_info
+		font-style 16px
+		+below(670px)
+				padding 5%
+
+	.card-pay_info > p
+		color tgrey
+
+	.card-info_block1 p,
+	.card-info_block2 p
+		padding 5px 0
+
+	.card-info_block1,
+	.card-info_block2
+		margin-right 32px
+		padding 20px 0
+		display inline-block
+
+	.card-info_block2
+		+below(370px)
+			margin-right none
+
+	.card-info_block1
+		color tgrey
+		+below(370px)
+				margin-right 7%
+
+	form
+		position relative
+
+		.card-first
+				position relative
+				z-index 2
+				margin-top 24px
+				padding 14px
+				display inline-block
+				background bg
+				border 1px solid br-color
+				border-radius 10px
+				+below(670px)
+					margin 20px auto
+					display block
+					width 350px
+				+below(370px)
+					width 100%
+
+
+				p
+					margin-top 8px
+					text-align left
+					color tgrey
+
+				input
+					border 1px solid br-color
+
+
+				.card-first_number
+					margin 8px 6px 8px 0
+					padding 10px
+					display inline-block
+					width 64px
+					height 40px
+					+below(370px)
+						margin 8px 0
+
+				.card-first_number-invalid
+					border-color red
+					background #ffb2b2
+				.card-first_number-valid
+					background #ddffdd
+
+				select
+					margin 6px 0
+					padding 10px
+					border 1px solid br-color
+
+				.month-type
+					width 70px
+
+
+				.year-type
+					margin-left 6px
+					width 86px
+
+				.login
+					margin-top 6px
+					padding 16px 10px
+					display block
+					width 320px
+					height 42px
+					+below(370px)
+						width 100%
+
+				.card-first_number-invalid
+					border-color red
+					background #ffb2b2
+				.card-first_number-valid
+					background #ddffdd
+
+			.card-second
+				position absolute
+				z-index 1
+				top 46px
+				left 194px
+				display inline-block
+				width 370px
+				height 236px
+				background bg
+				border 1px solid br-color
+				border-radius 10px
+				+below(670px)
+					position relative
+					top 0
+					left 0
+					margin 10px auto
+					display block
+					width 350px
+				+below(370px)
+					width 100%
+
+
+				.card-second_line
+					margin-top 25px
+					height 42px
+					background br-color
+
+		.btn_submit
+			margin 40px 16px
+			display block
+			width 134px
+			height 40px
+			font-size 14px
+			font-weight bold
+			color white
+			background linear-gradient(to top, #004ca2, #005abf)
+			border none
+			border-radius 20px
+
+			&:hover
+				background linear-gradient(to top, #005abf, #3092ff)
+
+
+		.card-second_kod
+			margin-top 18px
+			margin-right 14px
+			float right
+
+			p
+				color tgrey
+
+			.kod
+				margin-top 4px
+				padding 10px
+				width 138px
+				height 40px
+				background #fff url(/image/icon_cod.svg) no-repeat 95% 50%
+				background-size 25px 25px
+				border 1px solid br-color
+
+			.card-first_number-invalid
+				border-color red
+				background #ffb2b2
+			.card-first_number-valid
+				background #ddffdd

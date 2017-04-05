@@ -1,0 +1,45 @@
+mixin card()
+	.card
+		.card-pay_info
+			p Информация по оплате:
+			
+			.card-info_block1
+				p Номер счета:
+				p Сумма платежа:
+			.card-info_block2
+				p 87123658716587
+				p 100 руб.
+				
+		p Данные банковской карты
+		
+		form(name="contact_form", method="post").form
+			.card-first
+				p Номер карты
+				input(type="text" id="number1" required maxlength="4").card-first_number
+				input(type="text" id="number2" required maxlength="4").card-first_number
+				input(type="text" id="number3" required maxlength="4").card-first_number
+				input(type="text" id="number4" required maxlength="4").card-first_number
+				p Срок действия
+				
+				
+				select.month-type
+					option 1
+					option 2
+					option 3
+					option 4
+					
+				select.year-type
+					option 2014
+					option 2015
+					option 2016
+					option 2017
+					
+				input(type="text", id="login", class="login", name="user", placeholder="Держатель карты" required)
+				
+			.card-second
+				.card-second_line
+				.card-second_kod
+					p Код CVV2 / CVC2
+					input(type="text", id="code", name="card-number", required maxlength="3").kod
+		
+			input(type="submit", class="btn_submit", name="send", value="Оплатить", minlength="4")
