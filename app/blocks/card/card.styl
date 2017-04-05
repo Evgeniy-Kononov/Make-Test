@@ -4,7 +4,7 @@ br-color = #e4e9ee
 .card
 	padding 45px 30px
 	+below(670px)
-		padding none
+		padding 0
 
 	>p
 		margin-top 8px
@@ -35,7 +35,7 @@ br-color = #e4e9ee
 
 	.card-info_block2
 		+below(370px)
-			margin-right none
+			margin-right 0
 
 	.card-info_block1
 		color tgrey
@@ -81,8 +81,8 @@ br-color = #e4e9ee
 						margin 8px 0
 
 				.card-first_number-invalid
-					border-color red
 					background #ffb2b2
+					border-color red
 				.card-first_number-valid
 					background #ddffdd
 
@@ -92,9 +92,9 @@ br-color = #e4e9ee
 					border 1px solid br-color
 
 					>option
-						color tgrey
 						width 100%
-						border 0
+						color tgrey
+						border none
 						background bg
 						&:checked
 							background #ddffbb
@@ -117,8 +117,8 @@ br-color = #e4e9ee
 						width 100%
 
 				.card-first_number-invalid
-					border-color red
 					background #ffb2b2
+					border-color red
 				.card-first_number-valid
 					background #ddffdd
 
