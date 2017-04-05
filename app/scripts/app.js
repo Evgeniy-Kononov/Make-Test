@@ -7,7 +7,10 @@ $(() => {
 $(document).ready(function (){
 	console.log('вошли в валидацию почты');
 	$('.form').submit(function () {
-		const patternNumber = /[0-9]{4}$/gim;
+		const patternNumber1 = /[0-9]{4}$/gim;
+		const patternNumber2 = /[0-9]{4}$/gim;
+		const patternNumber3 = /[0-9]{4}$/gim;
+		const patternNumber4 = /[0-9]{4}$/gim;
 		const patternNumberCode = /[0-9]{3}$/gim;
 		const patternText = /^(([a-zA-Z]{3,})(\s([a-zA-Z]{3,}))){1}$/gim;
 		const number1 = $('#number1').val().trim();
@@ -17,7 +20,7 @@ $(document).ready(function (){
 		const code = $('#code').val().trim();
 		const login = $('#login').val().trim();
 
-		if (!patternNumber.test(number1)){
+		if (!patternNumber1.test(number1)){
 			$('#number1').addClass('card-first_number-invalid');
 			$('#number1').removeClass('card-first_number-valid');
 			event.preventDefault();
@@ -25,7 +28,7 @@ $(document).ready(function (){
 			$('#number1').removeClass('card-first_number-invalid');
 			$('#number1').addClass('card-first_number-valid');
 		}
-		if (!patternNumber.test(number2)){
+		if (!patternNumber2.test(number2)){
 			$('#number2').addClass('card-first_number-invalid');
 			$('#number2').removeClass('card-first_number-valid');
 			event.preventDefault();
@@ -33,7 +36,7 @@ $(document).ready(function (){
 			$('#number2').removeClass('card-first_number-invalid');
 			$('#number2').addClass('card-first_number-valid');
 		}
-		if (!patternNumber.test(number3)){
+		if (!patternNumber3.test(number3)){
 			$('#number3').addClass('card-first_number-invalid');
 			$('#number3').removeClass('card-first_number-valid');
 			event.preventDefault();
@@ -41,7 +44,7 @@ $(document).ready(function (){
 			$('#number3').removeClass('card-first_number-invalid');
 			$('#number3').addClass('card-first_number-valid');
 		}
-		if (!patternNumber.test(number4)){
+		if (!patternNumber4.test(number4)){
 			$('#number4').addClass('card-first_number-invalid');
 			$('#number4').removeClass('card-first_number-valid');
 			event.preventDefault();
